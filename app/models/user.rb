@@ -10,8 +10,12 @@ class User < ActiveRecord::Base
 
   attr_accessible :email, :password
 
-  def shout_feed
+  def shout_feed_for_self_and_followed_users
     ShoutFeed.new(self_and_followed_user_ids)
+  end
+
+  def shout_feed
+    ShoutFeed.new(id)
   end
 
   def create_shout(medium)

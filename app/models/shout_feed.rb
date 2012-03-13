@@ -1,4 +1,6 @@
 class ShoutFeed
+  extend ActiveModel::Naming
+
   def initialize(user_ids)
     @user_ids = user_ids
   end
