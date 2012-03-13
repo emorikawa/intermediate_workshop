@@ -1,5 +1,6 @@
 <span class="row">
   <span class="span3">
+    <%= gravatar(current_user) %>
     <h3><%= current_user.email %></h3>
     <div id='shout_forms'>
       <a href="#text_shout" class='shout-toggle' data-toggle="collapse" data-parent="#shout_forms">Shout with text</a>

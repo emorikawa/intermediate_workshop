@@ -3,6 +3,5 @@ class DashboardsController < ApplicationController
     @text_shout = TextShout.new
     @photo_shout = PhotoShout.new
     @shout_feed = current_user.shout_feed_for_self_and_followed_users
-    #.includes(:medium => :shout)
   end
 end

@@ -14,6 +14,7 @@ group :test do
   gem 'factory_girl_rails'
   gem 'bourne'
   gem 'email_spec'
+  gem 'ruby-debug19', :require => 'ruby-debug'
 end
 
 # Gems used only for assets and not required
@@ -43,4 +44,3 @@ gem 'jquery-rails'
 # gem 'capistrano'
 
 # To use debugger
-# gem 'ruby-debug19', :require => 'ruby-debug'
