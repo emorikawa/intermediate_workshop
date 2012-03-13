@@ -39,6 +39,11 @@
       <% flash.each do |key, value| %>
         <div class="alert alert-<%= key == :notice ? "success" : "error" %>"><%= value %></div>
       <% end %>
+
+      <%= form_tag search_path, method: :get do %>
+        <%= text_field_tag :search, nil, placeholder: "Search here" %>
+        <%= submit_tag "Search" %>
+      <% end %>
       <div class="content">
         <div class="row">
           <div class="span12">

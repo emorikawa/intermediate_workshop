@@ -3,4 +3,7 @@ class PhotoShout < ActiveRecord::Base
     thumb: "120x120"
   }
   has_one :shout, as: :medium
+
+  def index
+  end
 end
