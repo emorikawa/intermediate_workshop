@@ -1,4 +1,13 @@
-<h1><%= @user.email %></h1>
-<div id="shouts">
-  <%= render @shouts %>
-</div>
+<span class="row">
+  <span class="span3">
+    <h3><%= @user.email %></h3>
+    <% if current_user.can_follow?(@user) %>
+      <%= button_to "Follow", user_following_relationships_path(@user), class: "btn btn-warning" %>
+    <% end %>
+  </span>
+  <span class="span8">
+    <div id="shouts">
+      <%= render @shouts %>
+    </div>
+  </span>
+</span>
